@@ -1,12 +1,12 @@
 ---
 - hosts: dev
-  user: aniket
+  user: aniketb
   become: yes
   connection: ssh
   gather_facts: yes
   tasks:
-   
-        - name: Install Apache
-	  apt: name=apache2 update_cache=yes state=prese		  
-        - name: start Apache
-          action: service name=apache2 state=started
+    - name: Install Apache
+      apt: name=apache2 update_cache=yes state=present
+    - name: start Apache
+      action: service name=apache2 state=started
+
